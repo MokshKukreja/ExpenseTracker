@@ -7,7 +7,7 @@ function Signup() {
     const handleSubmit = async(e)=>{
         e.preventDefault()
         const{name,email,password} = credentials
-        const response = await fetch(`http://localhost:8000/users/signup`,{
+        const response = await fetch(`https://expensetracker-4moz.onrender.com/users/signup`,{
             method: 'POST',
             headers: {
               'Content-Type': 'application/json',

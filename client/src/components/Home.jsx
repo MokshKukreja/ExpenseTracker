@@ -190,7 +190,7 @@ function Home() {
 
     const getTransactions = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/transactions`,{
+            const response = await fetch(`https://expensetracker-4moz.onrender.com/transactions`,{
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -211,7 +211,7 @@ function Home() {
     
     const addTransactions = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/transactions`, {
+            const response = await fetch(`https://expensetracker-4moz.onrender.com/transactions`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -228,7 +228,7 @@ function Home() {
 
     const deleteTransactions = async (id) => {
         try {
-            await fetch(`http://localhost:8000/transactions/${id}`, {
+            await fetch(`https://expensetracker-4moz.onrender.com/transactions/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -243,7 +243,7 @@ function Home() {
     };
     const fetchUserName = async () => {
         try {
-            const response = await fetch(`http://localhost:8000/users/userinfo`, {
+            const response = await fetch(`https://expensetracker-4moz.onrender.com/users/userinfo`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',

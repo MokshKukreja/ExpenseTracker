@@ -24,15 +24,29 @@ app.use("/transactions",transactionRouter)
 app.use("/users",userRouter)
 
 
+// mongoose.connect("mongodb://localhost:27017/expp1", () => {
+//     console.log("Connected successfully");
+// })
 
-// mongoose.connect(process.env.MONGO_URL, () => {
+
+// mongoose.connect("mongodb+srv://mokshkukreja545:moksh1234@cluster0.jmxdezc.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0", () => {
 //     console.log("Connected successfully");
 // })
 // mongoose.set('strictQuery', true);
-mongoose.connect("mongodb://localhost:27017/expp", () => {
-    console.log("Connected successfully");
-})
+
+const uri = "mongodb+srv://mokshkukreja545:moksh1234@cluster0.jmxdezc.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0";
+
+// Set mongoose options
 mongoose.set('strictQuery', true);
+
+// Connect to the MongoDB cluster
+mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+    .then(() => {
+        console.log("Connected successfully");
+    })
+    .catch((error) => {
+        console.error("Connection error", error);
+    });
 
 
 
