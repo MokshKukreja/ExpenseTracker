@@ -58,9 +58,9 @@ label {
   transition: .5s ease-in-out;
 }
 
-input {
+/* input {
   width: 40%;
-  height: 40px; /* Adjusted height for better visibility */
+  height: 40px; 
   background: #e0dede;
   justify-content: center;
   display: flex;
@@ -68,8 +68,8 @@ input {
   padding: 10px;
   border: none;
   outline: none;
-  border-radius: 5px;
-}
+  border-radius: 50px;
+} */
 
 button {
   width: 60%;
@@ -128,7 +128,7 @@ button:hover {
 }
 
 .logout-btn{
-  width: 10%;
+  width: 105px;
   margin: 10px;
   justify-content: center;
   display: block;
@@ -143,4 +143,35 @@ button:hover {
   cursor: pointer;
 }
 
+.container-responsive{
+  width: 40%;
+}
+
+@media (max-width: 950px){
+  .container-responsive{
+    width: 60%;
+  }
+}
+@media (max-width: 550px){
+  .container-responsive{
+    width: 80%;
+  }
+  .logout-btn{
+    font-size: 1rem;
+    width: 85px;
+    height: 50px;
+  }
+ 
+}
+
+@media (max-width: 350px){
+  .navbar-brand{
+    font-size: 15px;
+  }
+  .logout-btn{
+    font-size: 1rem;
+    width: 65px;
+    height: 40px;
+  }
+}
 
